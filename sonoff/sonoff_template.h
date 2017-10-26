@@ -159,6 +159,7 @@ enum module_t {
   SUPLA1,
   WITTY,
   YUNSHAN,
+  QUETA,
   MAXMODULE };
 
 /********************************************************************************************/
@@ -207,7 +208,8 @@ const uint8_t nicelist[MAXMODULE] PROGMEM = {
   HUAFAN_SS,
   AILIGHT,
   WEMOS,
-  WITTY
+  WITTY,
+  QUETA
 };
 
 // Default module settings
@@ -650,6 +652,25 @@ const mytmplt modules[MAXMODULE] PROGMEM = {
      GPIO_KEY1,        // GPIO05 Blue Led and OptoCoupler input - Module Pin 9
      0, 0, 0, 0, 0, 0, // Flash connection
      0, 0, 0, 0, 0
+  },
+  { "Queta",    // Sonoff Basic (ESP8266)
+     0,        // GPIO00 Button
+     0,        // GPIO01 Serial RXD and Optional sensor
+     0,                // GPIO02
+     0,        // GPIO03 Serial TXD and Optional sensor
+     GPIO_USER,        // GPIO04 Blue LED
+     0,                // GPIO05
+     0,                // GPIO06 (SD_CLK   Flash)
+     0,                // GPIO07 (SD_DATA0 Flash QIO/DIO/DOUT)
+     0,                // GPIO08 (SD_DATA1 Flash QIO/DIO/DOUT)
+     0,                // GPIO09 (SD_DATA2 Flash QIO)
+     0,                // GPIO10 (SD_DATA3 Flash QIO)
+     0,                // GPIO11 (SD_CMD   Flash)
+     GPIO_REL1,        // GPIO12 Red Led and Relay (0 = Off, 1 = On)
+     GPIO_KEY1,    // GPIO13 Green Led (0 = On, 1 = Off)
+     0,        // GPIO14 Optional sensor
+     0,                // GPIO15
+     0,                // GPIO16
+     0                 // ADC0 Analog input
   }
 };
-
